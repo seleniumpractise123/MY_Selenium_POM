@@ -54,7 +54,8 @@ public class RegisterPage {
 		eleUtil.doClick(continueButton);
 		String userRegSuccessMesg = eleUtil.waitForElementVisible(userRegSuccMessg, AppConstants.LONG_DEFAULT_WAIT).getText();
 		
-		
+		eleUtil.doClick(logoutLink);
+		eleUtil.doClick(registerLink);
 		return userRegSuccessMesg;
 	}
 	
