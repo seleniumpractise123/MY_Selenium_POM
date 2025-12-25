@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.utils.AppConstants;
+import com.qa.opencart.utils.ExcelUtil;
 
 public class RegisterPageTest extends BaseTest{
 	
@@ -22,6 +23,7 @@ public class RegisterPageTest extends BaseTest{
 		//return "testautomation"+UUID.randomUUID()+"@gmail.com";
 	}
 	
+	/*
 	@DataProvider(name="regData")
 	public Object[][] getUserRegTestData() {
 		
@@ -33,8 +35,16 @@ public class RegisterPageTest extends BaseTest{
 		};
 	}
 	
+	*/
 	
-	@Test(dataProvider="regData")
+	@DataProvider(name="regExcelData")
+	public Object[][] getRegExcelTestData() {
+		Object regData[][] = ExcelUtil.getTestData("regData");
+		return regData;
+	}
+	
+	
+	@Test(dataProvider="regExcelData")
 	public void userRegisterTest(String firstName, String lastName, String telephone, String password, String subscribe) {
 				String actRegSuccMessg = 
 						registerPage.registerUser(firstName,lastName,getRandomEmailID(),telephone,password,subscribe);

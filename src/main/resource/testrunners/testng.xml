@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Open Cart Regression" verbose="4" thread-count="2" parallel="tests">
+  <test  name="Login Page Test">
+      <classes>
+         <class name="com.qa.opencart.tests.LoginPageTest"/>
+      </classes>
+  </test>
+  
+  <test  name="Account Page Test">
+      <classes>
+         <class name="com.qa.opencart.tests.AccountsPageTest"/>
+      </classes>
+  </test>
+  
+  <test  name="Search Test">
+      <classes>
+         <class name="com.qa.opencart.tests.SearchTest"/>
+      </classes>
+  </test> 
+  
+  <test  name="Product Information page Test">
+      <classes>
+         <class name="com.qa.opencart.tests.ProductPageInfoTest"/>
+      </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
