@@ -31,7 +31,8 @@ public class DriveryFactory {
 			tlDriver.set(new ChromeDriver(options_manager.getChromeOptions()));
 			break;
 		case "firefox":
-			driver = new FirefoxDriver(options_manager.getFirefoxOptions());
+			//driver = new FirefoxDriver(options_manager.getFirefoxOptions());
+			tlDriver.set(new FirefoxDriver(options_manager.getFirefoxOptions()));
 			break;
 		case "edge":
 			driver = new EdgeDriver();
@@ -59,7 +60,7 @@ public class DriveryFactory {
 	
 	public Properties initProp() {
 		
-		//mvn clean install -Devn="which environment in need to execute"
+		//mvn clean install -Devn="which environment in need to execute" -- help to run cmd line and jenkins
 		//mvn clean install
 		
 		Properties prop = new Properties();
@@ -92,7 +93,7 @@ public class DriveryFactory {
 			case "uat":
 				ip = new FileInputStream("./src/main/resource/config/uat.config.properties");
 				break;
-			case "prod":
+			case "prod":	
 				ip = new FileInputStream("./src/main/resource/config/config.properties");
 				break;
 

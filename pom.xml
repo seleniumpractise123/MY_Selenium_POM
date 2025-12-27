@@ -36,7 +36,7 @@
 			<artifactId>poi</artifactId>
 			<version>5.5.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
@@ -45,8 +45,8 @@
 
 	</dependencies>
 	<build>
-	<plugins>
-			<plugin>
+		<plugins>
+		<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.8.1</version>
@@ -64,24 +64,13 @@
 					<forkCount>3</forkCount>
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
-						 <suiteXmlFile>src/main/resources/testrunners/testng_regression.xml</suiteXmlFile>
+						 <suiteXmlFile>src/main/resource/testrunners/testng_regression.xml</suiteXmlFile>
 						<!-- <suiteXmlFile>${suiteXmlFile}</suiteXmlFile> -->
 					</suiteXmlFiles>
-
-					<argLine>
-						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-					</argLine>
-
-
 				</configuration>
-				<dependencies>
-					
-				</dependencies>
-
 			</plugin>
 
-
-</plugins>
+		</plugins>
 
 	</build>
 </project>

@@ -29,15 +29,11 @@ public class BaseTest {
 	protected Properties prop;
 	protected SoftAssert softAssert;
 	
-	@Parameters({"browser"})
 	@BeforeTest
-	public void setup(String browserName) {
+	public void setup() {
 		df = new DriveryFactory();
 		prop = df.initProp();
 		
-		if(browserName != null) {
-			prop.setProperty("browser", browserName);
-		}
 		
 		driver = df.initDriver(prop);
 		loginPage = new LoginPage(driver);
