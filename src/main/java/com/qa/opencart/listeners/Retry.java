@@ -1,5 +1,7 @@
 package com.qa.opencart.listeners;
 
-public class Retry {
+import org.testng.ITestListener;
+
+public class Retry implements ITestListener{
 
 }

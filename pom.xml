@@ -9,8 +9,7 @@
 
 	<name>Jan2023_OpenCart_Practise</name>
 	<url>http://maven.apache.org</url>
-	
-	
+
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +17,6 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<selenium-java>4.35.0</selenium-java>
 		<aspectj.version>1.9.19</aspectj.version>
-		<testng>7.10.0</testng>
 	</properties>
 
 	<dependencies>
@@ -32,7 +30,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>${testng}</version>
+			<version>7.11.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -48,13 +46,13 @@
 			<version>5.5.1</version>
 		</dependency>
 
-		
+		<!-- Chaintest Dependencies-->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>chaintest-testng</artifactId>
-			<version>1.0.8</version>
-			<scope>provided</scope>
+			<version>1.0.12</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -66,12 +64,6 @@
 			<artifactId>logback-classic</artifactId>
 			<version>1.5.13</version>
 			<scope>compile</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>Qualcomm_POC_Implement</groupId>
-			<artifactId>Qualcomm_POC_Implement</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	<build>

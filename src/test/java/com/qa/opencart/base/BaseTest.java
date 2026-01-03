@@ -18,7 +18,7 @@ import com.qa.opencart.pages.ProductInfoPage;
 import com.qa.opencart.pages.RegisterPage;
 import com.qa.opencart.pages.ResultsPage;
 
-@Listeners(ChainTestListener.class)
+//@Listeners(ChainTestListener.class)
 public class BaseTest {
 	
 	WebDriver driver;
