@@ -15,6 +15,7 @@ import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.LoginPage;
 import com.qa.opencart.utils.AppConstants;
+import com.qa.opencart.utils.PropertyReader;
 
 public class AccountsPageTest extends BaseTest{
 
@@ -27,7 +28,9 @@ public class AccountsPageTest extends BaseTest{
 	@Test
 	public void accPageTitleTest() {
 		String actTitle = accPage.getAccPageTitle();
+		System.out.println("Account Header ===>" + actTitle);
 		Assert.assertEquals(actTitle, AppConstants.ACCOUNTS_PAGE_TITLE_VALUE);
+		PropertyReader.write("Account Header=",actTitle);
 		
 	}
 	

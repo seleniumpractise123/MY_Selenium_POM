@@ -49,21 +49,8 @@
 		<!-- Chaintest Dependencies-->
 		<dependency>
 			<groupId>com.aventstack</groupId>
-			<artifactId>chaintest-testng</artifactId>
-			<version>1.0.12</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-api</artifactId>
-			<version>2.0.8</version>
-		</dependency>
-
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>1.5.13</version>
-			<scope>compile</scope>
+			<artifactId>extentreports</artifactId>
+			<version>5.1.2</version>
 		</dependency>
 	</dependencies>
 	<build>

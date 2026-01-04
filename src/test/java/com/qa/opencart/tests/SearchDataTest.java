@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.dataproviders.ProductDataProvider;
 import com.qa.opencart.pojo.Product;
+import com.qa.opencart.utils.PropertyReader;
 
 public class SearchDataTest extends BaseTest{
 	
@@ -45,6 +46,7 @@ public class SearchDataTest extends BaseTest{
 		productInfoPage = resultsPage.selectProduct(product.getProductName());
 		String actproductHeaderName = productInfoPage.getProductHeaderName();
 		System.out.println("Actual Product Name : " + actproductHeaderName);
+		PropertyReader.write("ProductHeader",actproductHeaderName);
 		Assert.assertEquals(actproductHeaderName, product.getProductName());
 	}
 	
